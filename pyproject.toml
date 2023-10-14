@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sgl"
+version = "0.0.1"
+description = "A stunning graph library"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+]
+dependencies = [
+    "torch>=1.12", "transformers>=4.24",
+    "numpy", "tqdm", "pulp", "attrs",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/rainy-lang/sgl"
+"Bug Tracker" = "https://github.com/rainy-lang/sgl/issues"
+
+[tool.setuptools.packages.find]
+exclude = ["benchmark*", "dist*", "playground*", "scripts*"]
+
+[tool.wheel]
+exclude = ["benchmark*", "dist*", "playground*", "scripts*"]
+
